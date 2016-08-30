@@ -33,12 +33,6 @@ Debugging:
 
 * xdebug (2.2.3)
 
-### # Notes
-
-* Packer Provisioning: This box is provisioned by shell scripts using ubuntu repository versions, unless otherwise stated. This should be migrated to a centralised puppet solution using the r10k development branch provided by Operations to keep dev in sync with stg/prod environments.
-
-* ELK Container: I've configured all local services + symfony + docker container logs to ship all logs to the local ELK stack which you can run by simply commenting out 'ELK' in the containers portion of Vagrant.yaml
-
 
 
 ### # To-Do
