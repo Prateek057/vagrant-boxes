@@ -1,0 +1,70 @@
+---
+
+## Vagrant Box Static Configuration
+ip: "192.168.150.2"
+memory: 4096
+cpus: 2
+provider: virtualbox
+
+## Configure Port Forwarding
+ports:
+     - send: 80
+       to: 80
+     - send: 3306
+       to: 3306
+     - send: 5672
+       to: 5672
+     - send: 8080
+       to: 8080
+     - send: 8081
+       to: 8081
+     - send: 9200
+       to: 9200
+     - send: 11211
+       to: 11211
+     - send: 15672
+       to: 15672
+     - send: 27017
+       to: 27017
+
+## Copy SSH Key
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+
+## Map Synced Folders - MUST USE /code directory inside of Vagrant
+folders:
+    - map: ~/PhpstormProjects
+      to: /code
+    - map: D:/Prateek
+      to: /code-new
+
+## Use this configuration for Symfony Projects. Comment out the 'type' for flat PHP projects.
+sites:
+    - map: symfony_example
+      to: /code/symfony_example/web/
+      type: symfony
+
+## Set DB Name, user/pass = root/root
+databases:
+    - symfony
+    - data
+
+## Set Environment Variables
+variables:
+    - key: APP_ENV
+      value: local
+
+## Enable Pre-Configured Docker Containers. (/opt/containers/)
+docker:
+     - container: jenkins
+#    - container: elk
+#    - container: rabbitmq
+
+## Run Misc Shell Commands here.
+commands:
+    - sudo service nginx status
+    - sudo service php5-fpm status
+    - sudo service mysql status
+    - sudo service memcached status
+    - sudo service mongodb status
