@@ -1,5 +1,3 @@
-# CHIP Vagrant-Dev
-https://intranet.cxo.name/jira/browse/AI-381
 
 Required Vagrant Plugins: 
 
