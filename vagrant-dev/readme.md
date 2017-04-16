@@ -1,10 +1,10 @@
 
-Install Vagrant 
-Install VirtualBox 5.0 
-once restarted
-cd inside vagrant-dev
-run vagrant up
-vagrant plugin install vagrant-vbguest
+* Install Vagrant 
+* Install VirtualBox 5.0 
+* once restarted
+* cd inside vagrant-dev
+* run vagrant up
+* vagrant plugin install vagrant-vbguest
 
 
 Required Vagrant Plugins: 
