@@ -1,4 +1,12 @@
 
+Install Vagrant 
+Install VirtualBox 5.0 
+once restarted
+cd inside vagrant-dev
+run vagrant up
+vagrant plugin install vagrant-vbguest
+
+
 Required Vagrant Plugins: 
 
 * vagrant-vbguest (Syncs Virtualbox version with Guest Additions)
